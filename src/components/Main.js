@@ -2,21 +2,22 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
+import ReactSliderStepComponent from './ReactSliderStepComponent';
 
-let yeomanImage = require('../images/yeoman.png');
-
+const lineClass={
+  fill:"none",
+  stroke:"#007ce7",
+  strokeLinecap:"round",
+  strokeMiterlimit:10,
+  strokeWidth:"5px"
+}
 class AppComponent extends React.Component {
   render() {
+    const { min, max, width } = this.props;
     return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
+      <ReactSliderStepComponent max={20} width={500} />
     );
   }
 }
-
-AppComponent.defaultProps = {
-};
 
 export default AppComponent;
