@@ -15,7 +15,7 @@ class AppComponent extends React.Component {
   render() {
     const { min, max, width } = this.props;
     return (
-      <ReactSliderStepComponent max={20} width={500} />
+      <ReactSliderStepComponent max={5} width={700} />
     );
   }
 }

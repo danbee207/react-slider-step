@@ -22,7 +22,7 @@ let ReactSliderStepComponent = ({ min, max, width }) => (
   <div className="index">
     <svg xmlns="http://www.w3.org/2000/svg" style={{width: width}} >
       <line style={lineClass} x1="2.5" y1="10" x2="100%" y2="10"/>
-      {_.map(_.range(min, max + 1), i => <Button key={i} i={i} />)}
+      {_.map(_.range(min, max + 1), i => <Button key={i} btnKinds={3} i={i}/>)}
     </svg>
   </div>
 );
